@@ -1,0 +1,61 @@
+Data Cleaning Notes (Excel)
+
+Removed cancelled invoices where Invoice starts with C
+
+Removed adjustment invoices where Invoice starts with A
+
+Removed negative quantity rows (returns)
+
+Fixed InvoiceDate format
+
+Created new columns: InvoiceYear, InvoiceMonth
+
+Created TotalAmount = Quantity * Price
+
+Removed rows with blank Customer ID (for retention analysis)
+
+MySQL Notes
+
+Created database: product_usage_retention
+
+Imported cleaned CSV into product_usage table (~1,048,575 rows)
+
+Created usage_clean table with valid CustomerID, Quantity, Price
+
+Wrote SQL queries for KPIs, retention cohort, repeat customers, top products, country analysis
+
+Power BI Notes
+
+Imported cleaned dataset
+
+Created KPI measures: Total Revenue, Total Orders, Unique Customers, Repeat Customers %
+
+Built visuals:
+
+KPI cards
+
+Monthly Active Customers trend line
+
+New vs Returning Customers chart
+
+Top Products by Revenue
+
+Revenue by Country
+
+Retention Cohort heatmap matrix
+
+Added slicers: InvoiceYear, InvoiceMonth, Country
+
+Folder Structure Reference
+
+data: raw, cleaned, preview files
+
+excel: cleaning workbook
+
+sql: KPI SQL queries
+
+powerbi: final dashboard file
+
+screenshots: dashboard proof images
+
+documentation: notes file
